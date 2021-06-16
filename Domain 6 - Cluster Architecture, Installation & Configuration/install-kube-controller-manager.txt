@@ -31,7 +31,7 @@ kubectl config use-context default --kubeconfig=kube-controller-manager.kubeconf
 
 Step 3: Copying the files to kubernetes directory
 
-cp kube-controller-manager.crt kube-controller-manager.key kube-controller-manager.kubeconfig /var/lib/kubernetes/
+cp kube-controller-manager.crt kube-controller-manager.key kube-controller-manager.kubeconfig ca.key /var/lib/kubernetes/
 Step 4: Configuring SystemD service file:
 
 cat <<EOF | sudo tee /etc/systemd/system/kube-controller-manager.service
